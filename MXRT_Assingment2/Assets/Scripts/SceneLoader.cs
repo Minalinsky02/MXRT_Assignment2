@@ -21,7 +21,7 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
     }
-    void QuitGame()
+    public void QuitGame()
     {
         Application.Quit();
         Debug.Log("Quitting Game");
