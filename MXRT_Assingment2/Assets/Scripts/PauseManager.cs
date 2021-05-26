@@ -16,20 +16,24 @@ public class PauseManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.touchCount > 0) 
-        {
-            Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began)
-            {
-                PauseGame();
-            }
+        //if (Input.touchCount > 0) 
+        //{
+        //    Touch touch = Input.GetTouch(0);
+        //    if (touch.phase == TouchPhase.Began)
+        //    {
+        //        PauseGame();
+        //    }
+        //    //else
+        //    //{
+        //    //    ResumeGame();
+        //    //}
        
 
-        }
+        //}
        
     }
     
-    void ResumeGame()
+    public void ResumeGame()
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
@@ -37,7 +41,7 @@ public class PauseManager : MonoBehaviour
         Debug.Log("Game will resume");
     }
 
-    void PauseGame()
+    public void PauseGame()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
