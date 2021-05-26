@@ -6,10 +6,12 @@ using UnityEngine.XR.ARFoundation;
 
 public class Spawner : MonoBehaviour
 {
-
+    public ARPlaneManager m_ARPlanemanager;
     public ARRaycastManager m_ARRaycastManager;
 
     public GameObject m_spawnableObjectPrefab;
+    private int enemySpawn = 0;
+    private int enemySpawnLimit = 2;
 
     Pose m_placementPose;
 
@@ -19,7 +21,22 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         m_spawnedObject = null;
+        m_ARPlanemanager.planesChanged += M_ARPlanemanager_planesChanged;
     }
+
+    private void M_ARPlanemanager_planesChanged(ARPlanesChangedEventArgs obj)
+    {
+        foreach (var plane in obj.added)
+        {
+            if (enemySpawn != enemySpawnLimit)
+            {
+                Instantiate(m_spawnableObjectPrefab, plane.center, Quaternion.identity);
+                enemySpawn++;
+            }                       
+        }
+    }
+
+
 
     // Update is called once per frame
     void Update()
