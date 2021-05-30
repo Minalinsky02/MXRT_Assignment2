@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Spawnable
+  - Addition
+  - Subtraction
+  - Multiplication
+  - Division
   layers:
   - Default
   - TransparentFX
