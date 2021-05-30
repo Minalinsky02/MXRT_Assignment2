@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 8247597781811684990}
   - component: {fileID: 8247597781811684991}
   - component: {fileID: 8247597781811684988}
-  - component: {fileID: 8247597781811684989}
   - component: {fileID: 8247597781811684978}
-  - component: {fileID: 8247597781811684979}
+  - component: {fileID: 5255705372780409246}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -99,22 +98,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0588074, y: 1.0365295, z: 1.0348892}
   m_Center: {x: 0.013046265, y: -0.0012207031, z: 0.0017356873}
---- !u!114 &8247597781811684989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8247597781811684976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4a938ca542345c419dd4f5d07dbeae1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyUI: {fileID: 882075142115744336, guid: 279be86f4126e4743a93db4d4f394467, type: 3}
-  enemyUICorrect: {fileID: 3947419423239971242, guid: 4e4663b828ab5574ba930b458978fa66, type: 3}
-  enemyUIWrong: {fileID: 778815336260483859, guid: 4e7655737ae604142a8dbfbe50d79594, type: 3}
-  arCamera: {fileID: 0}
 --- !u!95 &8247597781811684978
 Animator:
   serializedVersion: 3
@@ -134,59 +117,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8247597781811684979
+--- !u!114 &5255705372780409246
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8247597781811684976}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: f4a938ca542345c419dd4f5d07dbeae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8247597781811684989}
-        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
-        m_MethodName: enemyPopUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  enemyUI: {fileID: 0}
+  enemyUICorrect: {fileID: 0}
+  enemyUIWrong: {fileID: 0}
+  enemy: {fileID: 0}
+  arCamera: {fileID: 0}

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+
 public class Enemy : MonoBehaviour
 {
     public GameObject enemyUI;
@@ -15,22 +17,25 @@ public class Enemy : MonoBehaviour
 
     [SerializeField]
     private Camera arCamera;
-    
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        this.gameObject.name = "Enemy";
     }
 
     // Update is called once per frame
     void Update()
     {
-        enemyPopUp();
+        
+            enemyPopUp();
+        
+
     }
 
-    void enemyPopUp()
+    public void enemyPopUp()
     {
 
         if (Input.touchCount == 0)
@@ -41,19 +46,20 @@ public class Enemy : MonoBehaviour
 
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
         {
-            var ray = arCamera.ScreenPointToRay(Input.touches[0].position);
-            RaycastHit hit;
+            //var ray = arCamera.ScreenPointToRay(Input.touches[0].position);
+            //RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit) && hit.transform.name == "Enemy")
-            {
-                if (hit.collider != null)
-                {
-                    Instantiate(enemyUI, enemy.transform.position, Quaternion.identity);
-                    enemyUI.SetActive(true);
-                    Time.timeScale = 0f;
-                    enemyUIPop = true;
-                }
-            }
+            //if (Physics.Raycast(ray, out hit) && hit.transform.name == "Enemy")
+            //{
+            //    if (hit.collider != null)
+            //    {
+            
+            //    }
+            //}
+            Instantiate(enemyUI, enemy.transform.position, Quaternion.identity);
+            enemyUI.SetActive(true);
+            Time.timeScale = 0f;
+            enemyUIPop = true;
         }
     }
 
