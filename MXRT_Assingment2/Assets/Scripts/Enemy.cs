@@ -31,6 +31,10 @@ public class Enemy : MonoBehaviour
     {
         
             enemyPopUp();
+        if (answer == correct)
+        {
+            Invoke("enemyPopUpCorrect", 3f);
+        }
         
 
     }
@@ -61,6 +65,13 @@ public class Enemy : MonoBehaviour
             Time.timeScale = 0f;
             enemyUIPop = true;
         }
+    }
+
+    public void enemyPopUpCorrect()
+    {
+        enemyUICorrect.SetActive(true);
+        Time.timeScale = 0f;
+        enemyUICorrectPop = true;
     }
 
  
