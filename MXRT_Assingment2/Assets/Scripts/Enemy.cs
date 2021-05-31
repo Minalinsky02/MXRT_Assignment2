@@ -31,10 +31,10 @@ public class Enemy : MonoBehaviour
     {
         
             enemyPopUp();
-        if (answer == correct)
-        {
-            Invoke("enemyPopUpCorrect", 3f);
-        }
+        //if (answer == correct)
+        //{
+        //    Invoke("enemyPopUpCorrect", 3f);
+        //}
         
 
     }
@@ -69,11 +69,21 @@ public class Enemy : MonoBehaviour
 
     public void enemyPopUpCorrect()
     {
+        Instantiate(enemyUICorrect, enemy.transform.position, Quaternion.identity);
         enemyUICorrect.SetActive(true);
         Time.timeScale = 0f;
         enemyUICorrectPop = true;
+        Destroy(gameObject);
     }
 
- 
+    public void enemyPopUpWrong()
+    {
+        Instantiate(enemyUIWrong, enemy.transform.position, Quaternion.identity);
+        enemyUIWrong.SetActive(true);
+        Time.timeScale = 0f;
+        enemyUIWrongPop = true;
+    }
+
+
 
 }

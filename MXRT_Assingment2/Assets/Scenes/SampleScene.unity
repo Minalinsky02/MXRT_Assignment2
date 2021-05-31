@@ -1475,7 +1475,7 @@ GameObject:
   - component: {fileID: 543760241}
   - component: {fileID: 543760240}
   m_Layer: 5
-  m_Name: AnswerButton (2)
+  m_Name: WrongAnswerButton (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1544,7 +1544,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 543760241}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 482033252}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: enemyPopUpWrong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &543760241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2280,7 +2292,7 @@ GameObject:
   - component: {fileID: 932708083}
   - component: {fileID: 932708082}
   m_Layer: 5
-  m_Name: AnswerButton
+  m_Name: WrongAnswerButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2349,7 +2361,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 932708083}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 482033252}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: enemyPopUpWrong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &932708083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3555,7 +3579,7 @@ GameObject:
   - component: {fileID: 1470596047}
   - component: {fileID: 1470596046}
   m_Layer: 5
-  m_Name: AnswerButton (1)
+  m_Name: 'CorrectAnswerButton '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3624,7 +3648,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1470596047}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 482033252}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: enemyPopUpCorrect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1470596047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5622,7 +5658,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 778815336449578854}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 482033252}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: enemyPopUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &778815336449578851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5666,7 +5714,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 778815336449578848}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 482033252}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: enemyPopUpWrong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &778815336449578852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5859,7 +5919,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 778815336449578852}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 482033252}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: enemyPopUpWrong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &778815336449578856
 MonoBehaviour:
   m_ObjectHideFlags: 0
