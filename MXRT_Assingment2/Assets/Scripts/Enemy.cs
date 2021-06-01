@@ -20,24 +20,21 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private Camera arCamera;
 
+    
+
 
 
     // Start is called before the first frame update
     void Start()
     {
         this.gameObject.name = "Enemy";
+        
     }
 
     // Update is called once per frame
     void Update()
-    {
-        
-        enemyPopUp();
-        //if (enemyUICorrectPop == true)
-        //{
-        //    enemyPopUpCorrectGone();
-        //}
-
+    {        
+        enemyPopUp();        
     }
 
     public void enemyPopUp()
@@ -59,32 +56,19 @@ public class Enemy : MonoBehaviour
 
     public void enemyPopUpCorrect()
     {        
-        enemyUICorrect.SetActive(true);        
-        enemyUICorrectPop = true;
-        enemyUIWrong.SetActive(false);
-        enemyUIWrongPop = false;
-        enemyUI.SetActive(false);
-        enemyUIPop = false;
+        enemyUICorrect.SetActive(true); enemyUICorrectPop = true;
 
+        enemyUIWrong.SetActive(false); enemyUIWrongPop = false;
+
+        enemyUI.SetActive(false); enemyUIPop = false;
+
+        Scoring.scoreValue += 10;
     }
 
-    //void enemyPopUpCorrectGone()
-    //{
-        
-       
-
-    //    if (timeCount >= 10f)
-    //    {
-    //        enemyUICorrect.SetActive(false);
-    //        enemyUICorrectPop = false;
-    //        Debug.Log("Time passed");
-
-    //    }
-
-    //}
-        public void enemyPopUpWrong()
+    
+    public void enemyPopUpWrong()
     {
-        Instantiate(enemyUIWrong, enemy.transform.position, Quaternion.identity);
+        //Instantiate(enemyUIWrong, enemy.transform.position, Quaternion.identity);
         enemyUIWrong.SetActive(true);       
         enemyUIWrongPop = true;
     }
