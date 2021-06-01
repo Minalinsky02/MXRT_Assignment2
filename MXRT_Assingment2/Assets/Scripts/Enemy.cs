@@ -61,6 +61,10 @@ public class Enemy : MonoBehaviour
     {        
         enemyUICorrect.SetActive(true);        
         enemyUICorrectPop = true;
+        enemyUIWrong.SetActive(false);
+        enemyUIWrongPop = false;
+        enemyUI.SetActive(false);
+        enemyUIPop = false;
 
     }
 
