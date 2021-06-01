@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
     public GameObject enemyUICorrect;
     public GameObject enemyUIWrong;
     public GameObject enemy;
+    [SerializeField]
+    public float timeCount = 0f;
     public static bool enemyUIPop = false;
     public static bool enemyUICorrectPop = false;
     public static bool enemyUIWrongPop = false;
@@ -60,7 +62,7 @@ public class Enemy : MonoBehaviour
             
             //    }
             //}
-            Instantiate(enemyUI, enemy.transform.position, Quaternion.identity);
+            //Instantiate(enemyUI, enemy.transform.position, Quaternion.identity);
             enemyUI.SetActive(true);
             Time.timeScale = 0f;
             enemyUIPop = true;
@@ -69,11 +71,17 @@ public class Enemy : MonoBehaviour
 
     public void enemyPopUpCorrect()
     {
-        Instantiate(enemyUICorrect, enemy.transform.position, Quaternion.identity);
-        enemyUICorrect.SetActive(true);
-        Time.timeScale = 0f;
+        //Instantiate(enemyUICorrect, enemy.transform.position, Quaternion.identity);
+        enemyUICorrect.SetActive(true);        
         enemyUICorrectPop = true;
-        Destroy(gameObject);
+        timeCount  = timeCount * Time.deltaTime;
+
+        if (timeCount >= 3f)
+        {
+            enemyUICorrect.SetActive(false);          
+            enemyUICorrectPop = false;
+            Destroy(gameObject);
+        }
     }
 
     public void enemyPopUpWrong()
