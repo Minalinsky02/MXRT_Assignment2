@@ -32,12 +32,11 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         
-            enemyPopUp();
-        //if (answer == correct)
+        enemyPopUp();
+        //if (enemyUICorrectPop == true)
         //{
-        //    Invoke("enemyPopUpCorrect", 3f);
+        //    enemyPopUpCorrectGone();
         //}
-        
 
     }
 
@@ -51,44 +50,38 @@ public class Enemy : MonoBehaviour
         transform.LookAt(Camera.main.transform);
 
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
-        {
-            //var ray = arCamera.ScreenPointToRay(Input.touches[0].position);
-            //RaycastHit hit;
-
-            //if (Physics.Raycast(ray, out hit) && hit.transform.name == "Enemy")
-            //{
-            //    if (hit.collider != null)
-            //    {
-            
-            //    }
-            //}
-            //Instantiate(enemyUI, enemy.transform.position, Quaternion.identity);
-            enemyUI.SetActive(true);
-            Time.timeScale = 0f;
+        {           
+            enemyUI.SetActive(true);           
             enemyUIPop = true;
+            Debug.Log("Question Popped up");
         }
     }
 
     public void enemyPopUpCorrect()
-    {
-        //Instantiate(enemyUICorrect, enemy.transform.position, Quaternion.identity);
+    {        
         enemyUICorrect.SetActive(true);        
         enemyUICorrectPop = true;
-        timeCount  = timeCount * Time.deltaTime;
 
-        if (timeCount >= 3f)
-        {
-            enemyUICorrect.SetActive(false);          
-            enemyUICorrectPop = false;
-            Destroy(gameObject);
-        }
     }
 
-    public void enemyPopUpWrong()
+    //void enemyPopUpCorrectGone()
+    //{
+        
+       
+
+    //    if (timeCount >= 10f)
+    //    {
+    //        enemyUICorrect.SetActive(false);
+    //        enemyUICorrectPop = false;
+    //        Debug.Log("Time passed");
+
+    //    }
+
+    //}
+        public void enemyPopUpWrong()
     {
         Instantiate(enemyUIWrong, enemy.transform.position, Quaternion.identity);
-        enemyUIWrong.SetActive(true);
-        Time.timeScale = 0f;
+        enemyUIWrong.SetActive(true);       
         enemyUIWrongPop = true;
     }
 
