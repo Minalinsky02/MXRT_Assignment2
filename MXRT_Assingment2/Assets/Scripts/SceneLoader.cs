@@ -17,10 +17,12 @@ public class SceneLoader : MonoBehaviour
         
     }
 
+    //The gameplay scene would load into the area
     public void StartGame()
     {
         SceneManager.LoadScene("SampleScene");
     }
+    //the game/application would stop functioning and the application would close
     public void QuitGame()
     {
         Application.Quit();
