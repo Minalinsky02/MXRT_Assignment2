@@ -6,13 +6,15 @@ using UnityEngine.Android;
 
 public class PauseManager : MonoBehaviour
 {
+  
+
     //these are declared to set the pause menu UI and set it to false so it doesn't appear in the game screen by default
     public GameObject pauseMenuUI;
     public static bool gameIsPaused = false;
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
     // Update is called once per frame
     void Update()

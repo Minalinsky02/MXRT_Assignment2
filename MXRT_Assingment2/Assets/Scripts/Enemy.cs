@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
     public static bool enemyUIPop = false;
     public static bool enemyUICorrectPop = false;
     public static bool enemyUIWrongPop = false;
-
+    public static bool pausedGame = true;
     //this was made to see the arCamera in action in the inspector while testing the game out
     [SerializeField]
     private Camera arCamera;
@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
         transform.LookAt(Camera.main.transform);
 
         //For every input on the screen onto the enemy, the enemyUI question screen would pop up for the player to interact with
-        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
+        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began && PauseManager.gameIsPaused == false)
         {           
             enemyUI.SetActive(true);           
             enemyUIPop = true;
